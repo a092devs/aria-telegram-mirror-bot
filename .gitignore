@@ -1,8 +1,9 @@
-src/.constants.js
-aria*.sh
-node_modules/
-downloads/
-client_secret.json
-credentials.json
-npm-debug.log
-out/
+aria-telegram-mirror-bot/src/.constants.js
+aria-telegram-mirror-bot/aria*.sh
+aria-telegram-mirror-bot/node_modules/
+aria-telegram-mirror-bot/downloads/
+aria-telegram-mirror-bot/client_secret.json
+aria-telegram-mirror-bot/credentials.json
+aria-telegram-mirror-bot/npm-debug.log
+aria-telegram-mirror-bot/out/
+aria-telegram-mirror-bot/.git/
