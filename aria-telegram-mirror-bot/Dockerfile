@@ -16,17 +16,15 @@ RUN npm config set unsafe-perm true
 RUN npm install -g typescript
 
 RUN mkdir /bot
-RUN mkdir /tempclone
 RUN chmod 777 /bot
-run chmod 777 /tempclone
-WORKDIR /tempclone
-
-RUN git clone https://github.com/architdate/aria-telegram-mirror-bot /tempclone
-COPY ./aria-telegram-mirror-bot /bot
 WORKDIR /bot
 
-COPY ./src/.constants.js /bot/src/
-COPY ./aria*.sh ./client_secret.json ./credentials.json ./start.sh /bot/
+RUN git clone https://github.com/architdate/aria-telegram-mirror-bot /bot
+
+WORKDIR /bot/aria-telegram-mirror-bot
+
+COPY ./src/.constants.js /bot/aria-telegram-mirror-bot/src/
+COPY ./aria*.sh ./client_secret.json ./credentials.json ./start.sh /bot/aria-telegram-mirror-bot/
 
 CMD ["npm","install"]
 CMD ["tsc"]
